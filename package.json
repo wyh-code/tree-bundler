@@ -1,0 +1,67 @@
+{
+  "name": "tree-bundler",
+  "version": "1.0.1",
+  "description": "可视化目录树并打包文件为单一输出的交互式命令行工具，专为 AI 上下文分享设计 | Interactive CLI to visualize directory trees and bundle files into single output for AI context sharing",
+  "author": "wyh-code",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "tree-bundler": "bin/cli.js",
+    "tbd": "bin/cli.js",
+    "tb": "bin/cli.js"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "release:patch": "npm version patch -m 'chore(release): v%s' && git push --follow-tags && npm publish",
+    "release:minor": "npm version minor -m 'chore(release): v%s' && git push --follow-tags && npm publish"
+  },
+  "keywords": [
+    "tree",
+    "bundler",
+    "tree-bundler",
+    "directory",
+    "merge",
+    "interactive",
+    "cli",
+    "ai-context",
+    "code-export",
+    "file-merger",
+    "llm",
+    "chatgpt",
+    "claude"
+  ],
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "ignore": "^5.2.0",
+    "inquirer": "^9.0.0",
+    "minimatch": "^5.1.6",
+    "ora": "^9.0.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.0",
+    "@types/minimatch": "^5.1.2",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyh-code/tree-bundler.git"
+  },
+  "homepage": "https://github.com/wyh-code/tree-bundler#readme",
+  "bugs": {
+    "url": "https://github.com/wyh-code/tree-bundler/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
